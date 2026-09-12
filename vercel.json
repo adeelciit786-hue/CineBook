@@ -1,0 +1,11 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/release-holds",
+      "schedule": "* * * * *"
+    }
+  ],
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm install"
+}
