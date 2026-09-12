@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/db/store';
 import { generateQRCodeDataURL } from '@/lib/qrcode';
 
+export function generateStaticParams() {
+  return [{ reference: 'default' }];
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { reference: string } }

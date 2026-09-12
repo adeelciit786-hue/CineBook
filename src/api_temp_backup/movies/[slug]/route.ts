@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/db/store';
 
+export function generateStaticParams() {
+  return [
+    { slug: 'dune-part-two' },
+    { slug: 'oppenheimer' },
+    { slug: 'interstellar-imax' },
+    { slug: 'cyber-odyssey-neon-protocol' },
+    { slug: 'aurora-guardians-of-the-sky' },
+  ];
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { slug: string } }

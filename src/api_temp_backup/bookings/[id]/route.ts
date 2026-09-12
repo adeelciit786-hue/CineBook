@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/db/store';
 import { getSessionUser } from '@/lib/auth';
 
+export function generateStaticParams() {
+  return [{ id: 'default' }];
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { id: string } }

@@ -3,6 +3,10 @@ import { store } from '@/db/store';
 import { getSessionUser } from '@/lib/auth';
 import { logger } from '@/lib/logger';
 
+export function generateStaticParams() {
+  return [{ id: 'default' }];
+}
+
 export async function POST(
   req: NextRequest,
   { params }: { params: { id: string } }

@@ -1,6 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/db/store';
 
+export function generateStaticParams() {
+  return [
+    { id: 'st-dune-today-1' },
+    { id: 'st-dune-today-2' },
+    { id: 'st-dune-tomorrow-1' },
+    { id: 'st-opp-today-1' },
+    { id: 'st-opp-today-2' },
+    { id: 'st-inter-today-1' },
+  ];
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { id: string } }
